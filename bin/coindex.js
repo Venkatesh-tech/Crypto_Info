@@ -2,7 +2,10 @@
 const program = require("commander");
 const pkg = require("../package.json");
 
-program.version(pkg.version).parse(process.argv);
+program
+  .version(pkg.version)
+  .command("key", "Manage API Key -- https://nomics.com")
+  .parse(process.argv);
 
-console.log("hello From Crypto");
-console.log(process.argv);
+//console.log("hello From Crypto");
+//console.log(process.argv);
